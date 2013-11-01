@@ -4,11 +4,11 @@ from pygame.locals import *
 from settings import *
 from inputHandlers import baseHandler
 class game():
-    def __init__(self,states,startState):        
+    def __init__(self,states,startState,width = WINDOWWIDTH,height = WINDOWHEIGHT):        
         pygame.init()
         pygame.key.set_repeat(100, 300)
         self.fpsClock=pygame.time.Clock()
-        self.surf=pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
+        self.surf=pygame.display.set_mode((width, height))
         self.states=states
         self.currState=self.states[startState]
         for x in states.values():

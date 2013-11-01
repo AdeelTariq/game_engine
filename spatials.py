@@ -55,8 +55,8 @@ class button():
         self.textSize=textSize
         self.action=action
         self.focus=False        
-    def activate():
-        action()    #not defined?
+    def activate(self):
+        self.action()    
     def draw(self,surface):
         pass
     def isOnButton(self, point):

@@ -6,10 +6,12 @@ from inputHandlers import baseHandler
 
 class gameState():
     def __init__(self,spatials,handler,color):                            
+        """  """
         self.spatials=spatials
         self.inputHandler=handler
         self.isRunning=False
         self.color=color
+        
         
     def setSurface(self,surf):
         self.surf=surf
@@ -31,13 +33,11 @@ class gameState():
             s.update()    
     def background_draw(self):
         self.surf.fill(self.color)
-    def drawHUD(self):
+        pass
+    def HUD_draw(self):
         pass
     
     def draw(self):
         for s in self.spatials:
             s.draw(self.surf)
                
-
-
-

@@ -22,8 +22,8 @@ spatials=[]
 rect=pygame.Rect(x,y,20,20)
 mySpatial=dynSpatial(rect,2,BLUE)
 mySpatial.addControl(repControl((200,200),(140,140),70))
-handler=keyDownHandler([(K_s,moveBy_s),(K_w,changeState),(K_e,changeState2)])
+handler=keyDownHandler([(K_s,moveBy_s),(K_w,changeState),(K_e,changeState2)]) #Setting keyhandlers in (key, action) pairs 
 spatials.append(mySpatial)
-states={'1':gameState(spatials,handler,WHITE),'2':gameState([],handler,BLUE)}
+states={'1':gameState(spatials,handler,WHITE),'2':gameState([],handler,BLUE)} #possible states
 mygame = game(states,'1')
 mygame.run()
