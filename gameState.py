@@ -5,7 +5,7 @@ from settings import *
 from inputHandlers import baseHandler
 
 class gameState():
-    def __init__(self,spatials,handler,color):                            
+    def __init__(self,spatials,handler,color = WHITE):                            
         """  """
         self.spatials=spatials
         self.inputHandler=handler
@@ -23,7 +23,7 @@ class gameState():
                 self.inputHandler.handle_input(event)            
             self.update()
             self.draw()
-            self.drawHUD()
+            self.HUD_draw()
             pygame.display.update()
             fpsClock.tick(FPS)
     def stop(self):

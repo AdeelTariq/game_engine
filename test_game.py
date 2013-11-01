@@ -25,5 +25,5 @@ mySpatial.addControl(repControl((200,200),(140,140),70))
 handler=keyDownHandler([(K_s,moveBy_s),(K_w,changeState),(K_e,changeState2)]) #Setting keyhandlers in (key, action) pairs 
 spatials.append(mySpatial)
 states={'1':gameState(spatials,handler,WHITE),'2':gameState([],handler,BLUE)} #possible states
-mygame = game(states,'1')    
+mygame = game(states,'1',300,300)    
 mygame.run()
